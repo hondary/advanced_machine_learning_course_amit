@@ -1,0 +1,8 @@
+words = ["Welcome", "Mohand", "Honda", "Mohand", "Honda", "Honda", "mohand", "Hondary", "Mohand", "mohamed"]
+unique_words = set(words)
+counts = {word: 0 for word in unique_words}
+for i in unique_words:
+    for j in words:
+        if i == j:
+            counts[i] += 1
+print(counts)

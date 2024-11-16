@@ -1,0 +1,31 @@
+class TextFileReader:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def read_file(self):
+        with open(self.file_path, "r") as file:
+            return file.read()
+
+    def count_lines(self, content):
+        return content.count("\n") + 1  
+
+    def count_words(self, content):
+        return len(content.split())  
+
+    def count_characters(self, content):
+        return len(content)  
+
+def test_text_file_reader():
+    file_path = r"C:\Users\mohanad\Desktop\amit\advanced_machine_learning_course_amit\matrial\python_for_ml\tasks\task4.txt"
+    
+    reader = TextFileReader(file_path)
+    content = reader.read_file()
+
+    # Displaying the results
+    print(f"Lines: {reader.count_lines(content)}")
+    print(f"Words: {reader.count_words(content)}")
+    print(f"Characters: {reader.count_characters(content)}")
+    print("\nContent:\n", content)
+
+test_text_file_reader()
+

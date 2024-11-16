@@ -1,0 +1,27 @@
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+    def describe(self):
+        print("This is an animal.")
+class dog(Animal):
+    def make_sound(self):
+        print("haw haw ")
+class cat(Animal):
+    def make_sound(self):
+        print("mew mew")
+class cow(Animal):
+    def make_sound(self):
+        print("wooh")
+
+if __name__ == '__main__':
+    Dog=dog()
+    Cat=cat()
+    Cow=cow()
+    Dog.make_sound()
+    Cat.make_sound()
+    Cow.make_sound()
+    Dog.describe()
+    Cat.describe()
+    Cow.describe()
